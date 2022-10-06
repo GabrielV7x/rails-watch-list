@@ -1,3 +1,10 @@
 class ListsController < ApplicationController
-  has_many :bookmarks
+  def index
+    @lists = List.all
+  end
+
+  def show
+    @list = List.find(params[:id])
+  end
+
 end
